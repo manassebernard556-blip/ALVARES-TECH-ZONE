@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>INGÉNIEUR ALVARÉS TECH</title>
+    <style>
+        body { background-color: #050505; color: #00ff41; font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
+        h1 { color: #ff9800; text-align: center; border: 2px solid #ff9800; padding: 15px; text-transform: uppercase; }
+        h2 { color: #ff9800; border-left: 5px solid #ff9800; padding-left: 10px; margin-top: 40px; }
+        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 30px 0; }
+        .btn { background: #111; color: #00ff41; border: 2px solid #00ff41; padding: 15px 25px; cursor: pointer; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #00ff41; color: #000; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #111; }
+        td { border: 1px solid #ff9800; padding: 15px; color: #fff; }
+        .code-box { background: #000; color: #00ff41; padding: 15px; border-radius: 5px; border: 1px solid #00ff41; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+    <h1>BIENVENUE CHEZ INGÉNIEUR ALVARÉS</h1>
+
+    <div class="btn-container">
+        <a href="#bot" class="btn">BOT 🤖</a>
+        <a href="#ia" class="btn">IA 🎓</a>
+        <a href="#site" class="btn">CRÉER UN SITE</a>
+        <a href="#vpn" class="btn">SERVICES VPN</a>
+        <a href="#tools" class="btn">OUTILS TERMUX</a>
+    </div>
+
+    <div id="bot">
+        <h2>BOT WHATSAPP</h2>
+        <table>
+            <tr><td>BOT COMMENT LE CONNECTER A WHATSAPP</td></tr>
+            <tr><td>INSÉRER ICI TON NUMÉRO 👇</td></tr>
+            <tr><td>[ + ] <input type="text" placeholder="Ton numéro..."></td></tr>
+        </table>
+        <p>Le bot supprimera automatiquement tout lien envoyé par un membre (sauf administrateur ALVARES TECH ZONE). Message supprimé : <em>"Lien détecté et supprimé par le système Alvares !"</em></p>
+    </div>
+
+    <div id="ia">
+        <h2>CRÉATION D'IA (KAREN)</h2>
+        <table>
+            <tr><td>1. QUAND VOUS AVEZ LA CRÉATION DE VOTRE IA DANS LE SCRIPT, UNE FOIS DANS TERMUX, VOUS DEVEZ AVOIR UNE CLÉ GEMINI RÉCUPÉRÉE DANS GOOGLE STUDIO.</td></tr>
+            <tr><td>2. ACCÉDEZ À GOOGLE STUDIO, CONNECTEZ VOTRE E-MAIL, CRÉEZ UNE CLÉ ET COLLEZ-LA DANS LE SCRIPT DE L'IA DANS TERMUX.</td></tr>
+        </table>
+        <div class="code-box">
+            pkg update && pkg upgrade<br>
+            pkg install python mpv<br>
+            pip install gTTS speechrecognition requests<br>
+            nano assistant.py # (Collez votre script ici)<br>
+            python assistant.py
+        </div>
+    </div>
+
+    <div id="site">
+        <h2>CRÉER UN SITE DANS TERMUX</h2>
+        <div class="code-box">
+            pkg install apache2 php<br>
+            mv index.html /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/<br>
+            apachectl start
+        </div>
+    </div>
+
+    <div id="vpn">
+        <h2>SERVICES VPN</h2>
+        <p>Pour configurer une connexion sécurisée :</p>
+        <div class="code-box">
+            pkg install openvpn<br>
+            openvpn --config alvares_config.ovpn
+        </div>
+    </div>
+
+    <div id="tools">
+        <h2>OUTILS TERMUX</h2>
+        <p>Accès aux outils de test :</p>
+        <div class="code-box">
+            pkg install git<br>
+            git clone https://github.com/sqlmapproject/sqlmap<br>
+            cd sqlmap && python sqlmap.py -h
+        </div>
+    </div>
+
+</body>
+</html>
